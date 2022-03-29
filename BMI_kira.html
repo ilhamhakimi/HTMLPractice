@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+	<title> BMI Score Calculation </title>
+	<!-- Title for the system ......  -->
+	<link rel="stylesheet" href="#"/>
+	<!-- Code to recall the stylesheet link......  -->
+	<!--script src="BMI2.js"></script-->
+	</head>
+
+<body>
+<body style="background-color:powderblue;">
+	<div style="background-color:#0F0F8C ;height:45px">
+        <CENTER><h1 style="color:white">PUSAT GYM</h1> </CENTER>
+    </div>
+		<div header style="background-color:#EBDEF0;" ><center>
+		<marquee>
+		<p id="demo"></p>
+		</marquee>
+		</div>	
+<CENTER><H3><U> COUNT YOUR BMI SCORE ! </U></H3></CENTER>
+<center><br>
+	Enter your weight in kilograms and your height in centimeters in the form below and press the "See Result" button (Please read disclaimer below before using this form)	
+<P>  <br>
+<FORM NAME="BMI" method=POST>
+<TABLE border=1>
+<TR>
+	<TD><DIV ALIGN=CENTER> Your Weight (kg) </DIV></TD>
+	<TD><DIV ALIGN=CENTER> Your Height (cm) </DIV></TD>
+</TR>
+<TR>
+	<TD><INPUT TYPE=TEXT NAME=weight SIZE=15 onFocus="this.form.weight.value=''" maxlength=3></TD>
+	<TD><INPUT TYPE=TEXT NAME=height SIZE=15 onFocus="this.form.height.value=''" maxlength=3></TD>
+</TR>
+</TABLE>
+
+<P>
+ <INPUT TYPE="button" VALUE="See Result" onClick="computeform(this.form)" style="font-weight:bold; font-size:17px;  width:auto; background-color:salmon" >
+ <INPUT TYPE="reset"  VALUE="Reset" onClick="ClearForm(this.form)" style="font-weight:bold; font-size:17px; width:auto; background-color:salmon" >
+  
+<!-- Code for the result button and the reset button ......   -->
+
+<TABLE border=1>
+<TR>
+	<TD><DIV ALIGN=CENTER> Your BMI </DIV></TD>
+	<TD ><DIV ALIGN=CENTER> Comments </DIV></TD>
+</TR>
+<TR>
+	
+	<TD rowspan="2"><textarea rows="3" NAME=bmi  SIZE=8 readonly> </textarea></TD>
+	<TD rowspan="2" ><textarea rows="3" NAME=my_comment  size=55 readonly> </textarea></TD>
+	
+</TABLE>
+</FORM>
+
+<P><HR>
+<B>Disclaimer</B>: This form is based on the calculation of
+<A HREF="http://phaster.com/unpretentious/bmi.html"><I>"Body Mass Index"</I></A>
+and is only meant to be a demonstration of how Javascript(tm) could be used
+on a Web Page. 
+<br>Information it contains may not be accurate and is not designed or intended to serve as medical advice. I am not liable for any physical or psychological damages suffered as a result of using this script.
+<hr>
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!-- p> This free script provided by
+//JavaScriptKit </p -->
+
+//Body Mass calculator- by John Scott (johnscott03@yahoo.com)
+// ......
+//Credit must stay intact for use
+
+	var d = new Date();
+		document.getElementById("demo").innerHTML = d;
+		
+// function to clear the form
+function ClearForm(form){
+
+    /* 
+	
+	
+	*/
+}
+
+// function field for the bmi : weight and height
+function bmi(weight, height) {
+
+         /* 	
+
+		 */
+}
+
+// function field to fill and check the form
+function checkform(form) {
+
+       /*	if (form.weight.value==null||form.weight.value.length==0 || form.height.value==null||form.height.value.length==0){
+            alert("\nPlease complete the form first");
+            return false;	*/
+       }
+
+       else if (parseFloat(form.height.value) <= 0||
+                parseFloat(form.height.value) >=500||
+                parseFloat(form.weight.value) <= 0||
+                parseFloat(form.weight.value) >=500){
+                alert("\nReally know what you're doing? \nPlease enter values again. \nWeight in kilos and \nheight in cm");
+                ClearForm(form);
+                return false;
+       }
+       return true;
+}
+
+
+function computeform(form) {
+
+       if (checkform(form)) {
+
+       yourbmi=Math.round(bmi(form.weight.value, form.height.value/100));
+       form.bmi.value=yourbmi;
+
+       if 	/*(yourbmi >40) {
+								
+								*/
+       }
+
+       else if (yourbmi >30 && yourbmi <=40) {
+          /*	
+		 
+		 
+		  */
+		  
+			}
+       }
+       return;
+}
+ // -- 	 -->
+ 
+</SCRIPT>
+</body>
+</html>

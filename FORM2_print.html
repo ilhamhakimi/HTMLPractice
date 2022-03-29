@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Web Form</title>
+        <!--link rel='stylesheet' type='text/css' href=''/>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+			<!--script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script-->
+			<!--script src="Scripts/jquery-1.4.1-vsdoc.js" type="text/javascript">
+	 
+	 
+	function display() {
+	/*	 DispWin = window.open('','NewWin','toolbar=yes,status=yes,width=700,height=500')
+		var items=document.getElementsByName('langz');
+		var selectItems="";
+		for(var i=0; i<items.length; i++){
+		if(items[i].type=='checkbox' && items[i].checked==true)
+			selectItems+= " ~ " + items[i].value; 	*/
+				}
+					
+		message = "<b>THANK YOU!</b><BR> Now you can enjoy membership benefits. Here are your details upon registration:- <pre>" ;
+		/*	
+		.....
+		.....
+		.....
+		*/
+			message += "<li> Language :" + (selectItems) + "</ul>" + "<br>" +
+		// Code for the print message button......
+			'<br> <input type="button" value="Print" onclick="window.print()" />' ;
+		DispWin.document.write(message);
+		}			
+	</script-->	
+	</head>	
+<body>
+<body style="background-color:powderblue;"> <center>
+   <div style="background-color:#0F0F8C ;height:45px">
+        <CENTER><h1 style="color:white">PUSAT GYM</h1> </CENTER>
+   </div>
+   
+   <div id="header"><h1><u>Register now & join us for free!</u></h1></div> 
+        <br><div id="wrapper">
+           <form name="answer" action=" " method="post" id="answers" autofocus>
+            	<b>First name :</b> <input type="text" name="firstName" id="fname" placeholder="first name"><br/>
+            	<br><b>Last name :</b> <input type="text" name="lastName" placeholder="last name" id="lname"> <br/>
+            	<br><b>E-mail :</b> &nbsp; &nbsp; &nbsp;
+				<input type="email" name="email" placeholder="e-mail address" id="mail"> <br/><br/>
+                 <b>Gender :</b><br>
+					<input type="radio" name="gen" value="male">Male
+					<input type="radio" name="gen" value="female">Female<br/>
+				<br><b>Address :</b><br/> 
+				<textarea name="addr" rows="3" placeholder="your home address.."> </textarea>	
+			<br><br> <b>Nationality :</b> <br> 
+			<select name="nation" id="nations" >
+				<option value="default" checked>Choose Citizenship</option>
+					<option value="Citizen">Citizen </option>
+					<option value="Permanent Resident">Permanent Resident </option>
+					<option value="Non_Citizen">Non-Citizen </option></select><br>
+			<br><b> Birthday : </b><br>
+				<input type="date" name="bday" format="dd-mm-yyyy"> <br/>
+			<br><b> Telephone No : </b><br>
+				<input type="password" name="telno" id="telno" maxlength="10" placeholder="XXX-XXXXXXXX" >
+				<br/>
+			<div id="inputx" name="choices" class="choice" >	
+				<br><b>Language :</b><br>	
+					<input class="choice" type="checkbox" name="langz" value="B.MELAYU"  > B.Melayu
+					<input class="choice" type="checkbox" name="langz" value="ENGLISH" > English 
+					<input class="choice" type="checkbox" name="langz" value="MANDARIN" > Mandarin
+					<input class="choice" type="checkbox" name="langz" value="ARABIC" > Arabic
+					<input class="choice" type="checkbox" name="langz" value="TAMIL" > Tamil
+			</div>	
+			<br><p>
+            <input type="submit" id="submit" value="SUBMIT" onclick="display()" style="font-weight:bold; font-size:17px; width:auto; background-color:#5DADE2">
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="reset" id="submit" value="HOME" onclick="window.location.href='Login2.html'" style="font-weight:bold; font-size:17px; width:auto; background-color:#5DADE2" />
+      </form> 
+	  </div>	
+    </body></html>
